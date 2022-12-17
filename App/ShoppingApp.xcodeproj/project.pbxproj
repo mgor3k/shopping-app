@@ -99,8 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				B9023B23294DF2BD004F6682 /* Styles */,
-				B9023B1F294DDDC9004F6682 /* SearchBar.swift */,
-				B9023B21294DE56A004F6682 /* BannerView.swift */,
+				B9023B26294DF48B004F6682 /* Components */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -111,6 +110,15 @@
 				B9023B24294DF2CF004F6682 /* PrimaryButtonStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		B9023B26294DF48B004F6682 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B9023B21294DE56A004F6682 /* BannerView.swift */,
+				B9023B1F294DDDC9004F6682 /* SearchBar.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
