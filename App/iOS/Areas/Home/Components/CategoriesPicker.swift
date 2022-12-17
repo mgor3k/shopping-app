@@ -3,17 +3,57 @@
 import SwiftUI
 
 struct CategoriesPicker: View {
-  @Binding var category: Category
+  let categories: [Category]
+  @Binding var selectedCategory: Category
 
   var body: some View {
-    Text("Hello, World!")
+    ScrollView(.horizontal, showsIndicators: false) {
+      LazyHStack {
+        ForEach(categories, id: \.self) { category in
+          Text(category.name)
+            .font(.caption)
+            .lineLimit(1)
+            .foregroundColor(
+              selectedCategory == category
+              ? .white
+              : .gray
+            )
+            .padding(.horizontal)
+            .padding(.vertical, 10)
+            .background(
+              selectedCategory == category
+              ? Color.black
+              : Color.white
+            )
+            .clipShape(RoundedRectangle(
+              cornerRadius: 16,
+              style: .continuous
+            ))
+            .overlay(
+              RoundedRectangle(
+                cornerRadius: 16,
+                style: .continuous
+              )
+              .stroke(
+                .gray.opacity(0.2),
+                lineWidth: 1
+              )
+            )
+            .onTapGesture {
+              selectedCategory = category
+            }
+        }
+      }
+      .padding(.horizontal, 24)
+    }
   }
 }
 
 struct CategoriesPicker_Previews: PreviewProvider {
   static var previews: some View {
     CategoriesPicker(
-      category: .constant(.all)
+      categories: Category.allCases,
+      selectedCategory: .constant(.all)
     )
   }
 }

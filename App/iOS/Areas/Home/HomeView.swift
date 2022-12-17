@@ -8,24 +8,30 @@ struct HomeView: View {
   var body: some View {
     VStack(spacing: 24) {
       SearchBar()
+        .padding(.horizontal, 24)
 
       BannerView(
         title: "New\nCollection",
         backgroundColor: .brown
       )
+      .padding(.horizontal, 24)
+
 
       CategoriesBar(
         onViewAll: {}
       )
       .padding(.top, 8)
+      .padding(.horizontal, 24)
 
       CategoriesPicker(
-        category: $selectedCategory
+        categories: Category.allCases,
+        selectedCategory: $selectedCategory
       )
+      .frame(height: 44)
 
       Spacer()
     }
-    .padding(24)
+    .padding(.vertical, 24)
   }
 }
 

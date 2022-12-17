@@ -12,3 +12,22 @@ enum Category {
 }
 
 extension Category: CaseIterable {}
+
+extension Category {
+  var name: String {
+    switch self {
+    case .all:
+      return "All"
+    case .coats:
+      return "Coats"
+    case .shoes:
+      return "Shoes"
+    case .dresses:
+      return "Dresses"
+    case .shirts:
+      return "Shirts"
+    case .socks:
+      return "Socks"
+    }
+  }
+}
