@@ -3,8 +3,10 @@
 import SwiftUI
 
 struct HomeView: View {
+  @State var selectedCategory: Category = .all
+
   var body: some View {
-    VStack {
+    VStack(spacing: 24) {
       SearchBar()
 
       BannerView(
@@ -12,9 +14,18 @@ struct HomeView: View {
         backgroundColor: .brown
       )
 
+      CategoriesBar(
+        onViewAll: {}
+      )
+      .padding(.top, 8)
+
+      CategoriesPicker(
+        category: $selectedCategory
+      )
+
       Spacer()
     }
-    .padding()
+    .padding(24)
   }
 }
 

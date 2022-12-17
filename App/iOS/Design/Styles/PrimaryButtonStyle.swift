@@ -8,6 +8,8 @@ struct PrimaryButtonStyle: ButtonStyle {
   func makeBody(configuration: Configuration) -> some View {
     configuration
       .label
+      .font(.callout)
+      .bold()
       .padding(.horizontal)
       .padding(.vertical, 12)
       .background(backgroundColor)

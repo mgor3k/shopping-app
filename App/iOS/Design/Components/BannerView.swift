@@ -16,8 +16,11 @@ struct BannerView: View {
         Button("Shop now", action: {})
           .buttonStyle(.primaryWhite)
       }
+
+      Spacer()
     }
     .padding()
+    .frame(maxWidth: .infinity)
     .background(backgroundColor)
     .clipShape(RoundedRectangle(
       cornerRadius: 16,
