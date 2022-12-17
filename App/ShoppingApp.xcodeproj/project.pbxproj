@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B9023B0D294DDB15004F6682 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9023B0C294DDB15004F6682 /* App.swift */; };
-		B9023B0F294DDB15004F6682 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9023B0E294DDB15004F6682 /* ContentView.swift */; };
 		B9023B11294DDB16004F6682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9023B10294DDB16004F6682 /* Assets.xcassets */; };
 		B9023B14294DDB16004F6682 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9023B13294DDB16004F6682 /* Preview Assets.xcassets */; };
 		B9023B1D294DDD84004F6682 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9023B1C294DDD84004F6682 /* HomeView.swift */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		B9023B09294DDB15004F6682 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9023B0C294DDB15004F6682 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		B9023B0E294DDB15004F6682 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B9023B10294DDB16004F6682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9023B13294DDB16004F6682 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9023B1C294DDD84004F6682 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				B9023B0C294DDB15004F6682 /* App.swift */,
-				B9023B0E294DDB15004F6682 /* ContentView.swift */,
 				B9023B1A294DDD76004F6682 /* Areas */,
 				B9023B1E294DDDB5004F6682 /* Design */,
 				B9023B10294DDB16004F6682 /* Assets.xcassets */,
@@ -195,7 +192,6 @@
 				B9023B22294DE56A004F6682 /* BannerView.swift in Sources */,
 				B9023B1D294DDD84004F6682 /* HomeView.swift in Sources */,
 				B9023B20294DDDC9004F6682 /* SearchBar.swift in Sources */,
-				B9023B0F294DDB15004F6682 /* ContentView.swift in Sources */,
 				B9023B0D294DDB15004F6682 /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

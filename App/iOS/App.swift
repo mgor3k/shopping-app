@@ -3,10 +3,10 @@
 import SwiftUI
 
 @main
-struct ShoppingAppApp: App {
+struct MainApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      HomeView()
     }
   }
 }
