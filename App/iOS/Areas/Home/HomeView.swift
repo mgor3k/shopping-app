@@ -6,6 +6,12 @@ struct HomeView: View {
   var body: some View {
     VStack {
       SearchBar()
+
+      BannerView(
+        title: "New\nCollection",
+        backgroundColor: .brown
+      )
+
       Spacer()
     }
     .padding()
