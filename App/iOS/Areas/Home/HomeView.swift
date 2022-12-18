@@ -4,6 +4,11 @@ import SwiftUI
 
 struct HomeView: View {
   @State var selectedCategory: Category = .all
+  @State var products: [Product] = [
+    .init(name: "Coat", price: "$14.99"),
+    .init(name: "Coat2", price: "$14.99"),
+    .init(name: "Coat3", price: "$14.99")
+  ]
 
   var body: some View {
     VStack(spacing: 24) {
@@ -29,9 +34,21 @@ struct HomeView: View {
       )
       .frame(height: 44)
 
+      GeometryReader { proxy in
+        ScrollView {
+          LazyVGrid(columns: [.init(spacing: 24), .init()], spacing: 12) {
+            ForEach(products, id: \.name) { product in
+              HomeProductView(product: product)
+                .frame(height: proxy.size.width / 2)
+            }
+          }
+          .padding(24)
+        }
+      }
+
       Spacer()
     }
-    .padding(.vertical, 24)
+    .padding(.top, 24)
   }
 }
 
