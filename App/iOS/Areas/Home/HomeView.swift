@@ -7,7 +7,9 @@ struct HomeView: View {
   @State var products: [Product] = [
     .init(name: "Coat", price: "$14.99"),
     .init(name: "Coat2", price: "$14.99"),
-    .init(name: "Coat3", price: "$14.99")
+    .init(name: "Coat3", price: "$14.99"),
+    .init(name: "Coat4", price: "$14.99"),
+    .init(name: "Coat5", price: "$14.99")
   ]
 
   var body: some View {
@@ -15,38 +17,36 @@ struct HomeView: View {
       SearchBar()
         .padding(.horizontal, 24)
 
-      BannerView(
-        title: "New\nCollection",
-        backgroundColor: .brown
-      )
-      .padding(.horizontal, 24)
+      ScrollView {
+        BannerView(
+          title: "New\nCollection",
+          backgroundColor: .brown
+        )
+        .padding(.horizontal, 24)
 
 
-      CategoriesBar(
-        onViewAll: {}
-      )
-      .padding(.top, 8)
-      .padding(.horizontal, 24)
+        CategoriesBar(
+          onViewAll: {}
+        )
+        .padding(.top, 8)
+        .padding(.horizontal, 24)
 
-      CategoriesPicker(
-        categories: Category.allCases,
-        selectedCategory: $selectedCategory
-      )
-      .frame(height: 44)
+        CategoriesPicker(
+          categories: Category.allCases,
+          selectedCategory: $selectedCategory
+        )
+        .frame(height: 44)
 
-      GeometryReader { proxy in
-        ScrollView {
-          LazyVGrid(columns: [.init(spacing: 24), .init()], spacing: 12) {
-            ForEach(products, id: \.name) { product in
-              HomeProductView(product: product)
-                .frame(height: proxy.size.width / 2)
-            }
+        LazyVGrid(columns: [.init(spacing: 24), .init()], spacing: 12) {
+          ForEach(products, id: \.name) { product in
+            HomeProductView(product: product)
+              .frame(height: 500)
           }
-          .padding(24)
         }
-      }
+        .padding(24)
 
-      Spacer()
+        Spacer()
+      }
     }
     .padding(.top, 24)
   }
