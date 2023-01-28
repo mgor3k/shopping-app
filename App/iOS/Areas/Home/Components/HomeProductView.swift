@@ -7,7 +7,19 @@ struct HomeProductView: View {
 
   var body: some View {
     VStack(alignment: .leading) {
-      Color.blue
+      AsyncImage(url: product.imageUrl) { phase in
+        switch phase {
+        case .success(let image):
+          image
+            .resizable()
+        case .failure:
+          Color.red
+        case .empty:
+          Color.gray
+        @unknown default:
+          Color.purple
+        }
+      }
         .clipShape(RoundedRectangle(
           cornerRadius: 24,
           style: .continuous
