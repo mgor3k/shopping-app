@@ -31,7 +31,7 @@ struct CategoriesPicker: View {
             ))
             .overlay(
               RoundedRectangle(
-                cornerRadius: 16,
+                cornerRadius: 12,
                 style: .continuous
               )
               .stroke(
