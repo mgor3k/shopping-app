@@ -7,6 +7,12 @@ struct HomeView: View {
   @State var products: [Product] = Product.mocks
 
   var body: some View {
+    GeometryReader { proxy in
+      content(proxy: proxy)
+    }
+  }
+
+  func content(proxy: GeometryProxy) -> some View {
     VStack(spacing: 24) {
       SearchBar()
         .padding(.horizontal, 24)
@@ -34,7 +40,7 @@ struct HomeView: View {
         LazyVGrid(columns: [.init(spacing: 24), .init()], spacing: 12) {
           ForEach(products, id: \.name) { product in
             HomeProductView(product: product)
-              .frame(height: 500)
+              .frame(height: (proxy.size.width / 1.8))
           }
         }
         .padding(24)
