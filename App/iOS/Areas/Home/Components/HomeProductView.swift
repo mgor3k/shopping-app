@@ -8,6 +8,10 @@ struct HomeProductView: View {
   var body: some View {
     VStack(alignment: .leading) {
       Color.blue
+        .clipShape(RoundedRectangle(
+          cornerRadius: 24,
+          style: .continuous
+        ))
 
       Text(product.name)
       Text(product.price)
@@ -18,10 +22,8 @@ struct HomeProductView: View {
 struct HomeProductView_Previews: PreviewProvider {
   static var previews: some View {
     HomeProductView(
-      product: .init(
-        name: "Product name",
-        price: "$12.99"
-      )
+      product: Product.mocks[0]
     )
+    .padding()
   }
 }

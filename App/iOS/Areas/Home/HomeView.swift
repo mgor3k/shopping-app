@@ -4,13 +4,7 @@ import SwiftUI
 
 struct HomeView: View {
   @State var selectedCategory: Category = .all
-  @State var products: [Product] = [
-    .init(name: "Coat", price: "$14.99"),
-    .init(name: "Coat2", price: "$14.99"),
-    .init(name: "Coat3", price: "$14.99"),
-    .init(name: "Coat4", price: "$14.99"),
-    .init(name: "Coat5", price: "$14.99")
-  ]
+  @State var products: [Product] = Product.mocks
 
   var body: some View {
     VStack(spacing: 24) {
